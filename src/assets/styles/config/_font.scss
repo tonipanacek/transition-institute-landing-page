@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700&display=swap');
+
+$fonts: (
+  main: (Libre Caslon Text, serif),
+  header: (Libre Caslon Text, serif)
+);
+
+@function font($key) {
+  // Create a `font` function to easily get any font value, i.e, `font(brand)`
+  @if map-has-key($fonts, $key) {
+    @return map-get($fonts, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $fonts.";
+  @return null;
+}
+
+@each $name, $font in $fonts {
+  // Create font utility classes
+ .font\:#{$name}, .c\:#{$name} {
+   font-family: $font !important;
+  }
+}
+
+@mixin smallCaps {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+body {
+  font-family: font(main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: font(header);
+}
+
+body {
+  background: black;
+}
