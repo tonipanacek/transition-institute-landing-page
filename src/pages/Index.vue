@@ -1,7 +1,8 @@
 <template>
   <Layout class="main">
-    <h1>Transition Institute</h1>
-    <p>Coming soon</p>
+    <video autoplay muted loop id="myVideo">
+      <source src="https://res.cloudinary.com/tonipanoche/video/upload/v1579822012/transition_j5cj2u.mp4" type="video/mp4">
+    </video>
   </Layout>
 </template>
 
@@ -14,18 +15,17 @@ export default {
 </script>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700&display=swap');
-  body {
-    font-family: 'Libre Caslon Text';
-  }
-  .main {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0;
-    margin: 0 auto;
-  }
+body {
+  margin: 0;
+  padding: 0;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 </style>
