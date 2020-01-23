@@ -5,7 +5,7 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "predeploy": "gridsome build",
+    "predeploy": "gridsome build && echo 'www.transition-institute.org' > ./dist/CNAME",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
