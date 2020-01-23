@@ -17,7 +17,8 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: 'Transition Institute',
-  siteUrl: 'https://www.transitioninstitute.org',
+  ssiteUrl: 'https://tonipanacek.github.io',
+  pathPrefix: '/transition-institute',
   plugins: [
   ],
   chainWebpack (config) {
