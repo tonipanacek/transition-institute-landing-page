@@ -1,6 +1,6 @@
 <template>
   <Layout class="main">
-    <video autoplay muted loop id="myVideo">
+    <video autoplay muted loop playsinline id="myVideo">
       <source src="https://res.cloudinary.com/tonipanoche/video/upload/v1579822012/transition_j5cj2u.mp4" type="video/mp4">
     </video>
   </Layout>
